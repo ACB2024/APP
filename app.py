@@ -83,7 +83,7 @@ def generar():
         cargo = request.form["cargo"].strip()
 
         plantilla = Image.open(
-            os.path.join(CARPETA_FOTOS, "plantilla.jpg")
+            os.path.join(CARPETA_FOTOS, "plantilla.jpeg")
         ).convert("RGBA")
 
         draw = ImageDraw.Draw(plantilla)
