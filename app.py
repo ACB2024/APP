@@ -92,16 +92,16 @@ def generar():
         # FUENTE REAL
         # =====================
         font_path = os.path.join(CARPETA_FUENTES, "Montserrat-Bold.ttf")
-        font_nombre = ImageFont.truetype(font_path, 80)
-        font_datos = ImageFont.truetype(font_path, 60)
+        font_nombre = ImageFont.truetype(font_path, 60)
+        font_datos = ImageFont.truetype(font_path, 40)
 
         color = (20, 60, 20)
 
         # =====================
         # POSICIONES (AJUSTA A TU PLANTILLA)
         # =====================
-        draw.text((350, 350), nombre, font=font_nombre, fill=color)
-        draw.text((350, 450), f"Documento: {documento}", font=font_datos, fill=color)
+        draw.text((350, 350), f"Nombre: {nombre}", font=font_nombre, fill=color)
+        draw.text((350, 450), f"ID: {documento}", font=font_datos, fill=color)
         draw.text((350, 530), f"Cargo: {cargo}", font=font_datos, fill=color)
 
         nombre_archivo = f"carnet_{documento}.png"
