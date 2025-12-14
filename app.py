@@ -80,7 +80,7 @@ def generar():
 
         nombre = request.form["nombre"].strip()
         documento = request.form["documento"].strip()
-        cargo = request.form["cargo"].strip()
+        Categoría = request.form["Categoría"].strip()
 
         plantilla = Image.open(
             os.path.join(CARPETA_FOTOS, "plantilla.jpeg")
@@ -102,7 +102,7 @@ def generar():
         # =====================
         draw.text((2500, 1700), f"Nombre: {nombre}", font=font_nombre, fill=color)
         draw.text((2500, 2200), f"ID: {documento}", font=font_datos, fill=color)
-        draw.text((2500, 2700), f"Cargo: {cargo}", font=font_datos, fill=color)
+        draw.text((2500, 2700), f"Categoría: {Categoría}", font=font_datos, fill=color)
 
         nombre_archivo = f"carnet_{documento}.png"
         ruta = os.path.join(CARPETA_CARNETS, nombre_archivo)
