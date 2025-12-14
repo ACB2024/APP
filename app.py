@@ -92,7 +92,7 @@ def generar():
         # FUENTE REAL
         # =====================
         font_path = os.path.join(CARPETA_FUENTES, "Montserrat-Bold.ttf")
-        font_nombre = ImageFont.truetype(font_path, 60)
+        font_nombre = ImageFont.truetype(font_path, 40)
         font_datos = ImageFont.truetype(font_path, 40)
 
         color = (20, 60, 20)
