@@ -95,32 +95,27 @@ def generar():
             return "No existe la plantilla", 500
 
         # =====================
-        # IMAGEN (REDIMENSIONADA)
+        # USAR TAMAÑO ORIGINAL
         # =====================
         carnet = Image.open(plantilla_path).convert("RGBA")
-        carnet = carnet.resize((2000, 1200))  # 🔥 CLAVE
-
         draw = ImageDraw.Draw(carnet)
 
         # =====================
-        # FUENTE MÁS GRANDE
+        # FUENTE GRANDE DE VERDAD
         # =====================
         try:
-            font = ImageFont.truetype("arial.ttf", 90)  # 🔥 ANTES 48
+            font = ImageFont.truetype("arial.ttf", 140)
         except:
             font = ImageFont.load_default()
 
         color = (20, 60, 20)
 
-        # =====================
-        # POSICIONES AJUSTADAS
-        # =====================
-        x = 600
-        y = 500
+        x = 800
+        y = 900
 
         draw.text((x, y), f"Nombre: {nombre}", font=font, fill=color)
-        draw.text((x, y + 140), f"Documento: {documento}", font=font, fill=color)
-        draw.text((x, y + 280), f"Cargo: {cargo}", font=font, fill=color)
+        draw.text((x, y + 200), f"Documento: {documento}", font=font, fill=color)
+        draw.text((x, y + 400), f"Cargo: {cargo}", font=font, fill=color)
 
         nombre_archivo = f"carnet_{documento}.png"
         ruta = os.path.join(CARPETA_CARNETS, nombre_archivo)
