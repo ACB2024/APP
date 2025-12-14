@@ -100,9 +100,9 @@ def generar():
         # =====================
         # POSICIONES (AJUSTA A TU PLANTILLA)
         # =====================
-        draw.text((3000, 1500), f"Nombre: {nombre}", font=font_nombre, fill=color)
-        draw.text((3000, 2000), f"ID: {documento}", font=font_datos, fill=color)
-        draw.text((3000, 2500), f"Cargo: {cargo}", font=font_datos, fill=color)
+        draw.text((3000, 1700), f"Nombre: {nombre}", font=font_nombre, fill=color)
+        draw.text((3000, 2200), f"ID: {documento}", font=font_datos, fill=color)
+        draw.text((3000, 2700), f"Cargo: {cargo}", font=font_datos, fill=color)
 
         nombre_archivo = f"carnet_{documento}.png"
         ruta = os.path.join(CARPETA_CARNETS, nombre_archivo)
